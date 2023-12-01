@@ -6,6 +6,7 @@
 - 常用向量数据操作用例：tests/test_qdrant.py
 - 搜索服务API：service.py
 - 异步支持：neural_searcher.py
+- 图片向量化匹配：tests/test_qdrant_img.py
 
 ## 环境要求
 
