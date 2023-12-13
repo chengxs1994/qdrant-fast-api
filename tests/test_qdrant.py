@@ -69,6 +69,31 @@ class TestQDrant(unittest.TestCase):
 
         print(search_result)
 
+    # 删除向量
+    def test_delete(self):
+        self.client.delete(
+            collection_name="test_collection",
+            points_selector=models.PointIdsList(
+                points=[6],
+            ),
+        )
+
+    # 删除指定过滤器向量
+    def test_delete_filter(self):
+        self.client.delete(
+            collection_name="test_collection",
+            points_selector=models.FilterSelector(
+                filter=models.Filter(
+                    must=[
+                        models.FieldCondition(
+                            key="city",
+                            match=models.MatchValue(value="New York"),
+                        ),
+                    ],
+                )
+            ),
+        )
+
     # ---------------------- 数据集转向量 ----------------------
 
     # 数据集转向量
