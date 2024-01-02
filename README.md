@@ -2,7 +2,12 @@
 
 提供了基于 qdrant 向量数据库的学习用例和通过 fastapi 搭建高性能搜索服务API Demo.
 
-### 快速导航
+### 案例
+- 向量数据库使用
+- 文本搜索快速实现
+- 图像识别快速实现
+
+### 代码导航
 - 常用向量数据操作用例：tests/test_qdrant.py
 - 搜索服务API：service.py
 - 异步支持：neural_searcher.py
